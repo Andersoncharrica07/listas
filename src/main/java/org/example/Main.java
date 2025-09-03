@@ -1,17 +1,59 @@
 package org.example;
 
+import java.util.ArrayList;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // 1. Crear una lista de enteros con tamaño 6
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        numeros.add(10);
+        numeros.add(20);
+        numeros.add(30);
+        numeros.add(40);
+        numeros.add(50);
+        numeros.add(60);
+
+        // Imprimir la lista
+        System.out.println("Lista de números: " + numeros);
+
+        // 2. Sumar los valores usando foreach
+        int suma = 0;
+        for (int num : numeros) {
+            suma += num; // suma = suma + num
+        }
+
+        // Mostrar el resultado
+        System.out.println("La suma de los números es: " + suma);
+
+        // 3. Crear una lista de nombres
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add("Ana");
+        nombres.add("Luis");
+        nombres.add("Carlos");
+        nombres.add("María");
+
+        // Imprimir usando FOR
+        System.out.println("\nImprimir con FOR:");
+        for (int i = 0; i < nombres.size(); i++) {
+            System.out.println(nombres.get(i));
+        }
+
+
+        // Imprimir usando FOREACH
+        System.out.println("\nImprimir con FOREACH:");
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+
+
+        System.out.println("\nImprimir con WHILE:");
+        int i = 0;
+        while (i < nombres.size()) {
+            System.out.println(nombres.get(i));
+            i++;
         }
     }
 }
